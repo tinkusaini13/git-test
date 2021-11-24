@@ -4,10 +4,10 @@ MAINTAINER masterji
 
 RUN  yum -y install httpd
 
-RUN systemctl start httpd
+RUN service httpd start 
 
 RUN echo "hello this is a website run on http server "  >> /var/www/html/index.html
 
-RUN systemctl restart httpd
+RUN service  httpd start 
  
 RUN curl localhost
